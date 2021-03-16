@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  player:
+    container_name: player
+    image: "arupiot/gopd-audio-play:latest"
+    privileged: true
+    volumes:
+       - /opt/audio:/opt/audio
+       - /dev/vchiq:/dev/vchiq
+       - /opt/vc:/opt/vc
+    restart: always
+    environment:
+      - VOLUME=0
+      - OUTPUT=alsa
+      - PATH=/opt/audio
