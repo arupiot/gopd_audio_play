@@ -11,6 +11,8 @@ services:
        - /opt/vc:/opt/vc
     restart: always
     environment:
-      - VOLUME=0
-      - OUTPUT=alsa
-      - PATH=/opt/audio
+      - AUDIO_VOLUME=-900
+      - AUDIO_DEVICE=alsa
+      - AUDIO_PATH=/opt/audio/test
+      - AUDIO_EXT=.mp3
+      - AUDIO_LAYOUT=2.1

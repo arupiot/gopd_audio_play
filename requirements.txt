@@ -1,1 +1,2 @@
 omxplayer-wrapper
+pyfiglet
